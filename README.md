@@ -5,6 +5,7 @@ This project implements and evaluates a custom **Linear Transformer** model for 
 ---
 
 ## Project Structure
+```bash 
 Linear_Attention/
 │── Notebook/            
 │   ├── data_cleaning.ipynb                   # This notebook has cleaning code for ICD raw dataset
