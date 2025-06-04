@@ -2,6 +2,7 @@
 
 This project implements and evaluates a custom **Linear Transformer** model for **English-to-Hindi machine translation**, designed to improve computational efficiency over the standard **Vanilla Transformer**. By reducing the quadratic complexity of self-attention to linear time using kernel-based feature maps, the model achieves faster convergence and lower memory consumption without significantly sacrificing translation quality.
 
+Report Link: https://drive.google.com/file/d/1b9uhUT5qeSeD179v4SDiP5Sl-qC_t96G/view?usp=sharing
 ---
 
 ## Project Structure
