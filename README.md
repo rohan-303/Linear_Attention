@@ -5,7 +5,54 @@ This project implements and evaluates a custom **Linear Transformer** model for 
 ---
 
 ## Project Structure
+Linear_Attention/
+│── Notebook/            
+│   ├── data_cleaning.ipynb                   # This notebook has cleaning code for ICD raw dataset
+│   ├── data_collection&Analysis.ipynb        # This notebook has the code for Dataset Extraction and EDA on Cleaned Dataset.
+│   ├── Evaluation_Desc_ICD.ipynb             # This notebook has the graphs of both training and tetsing data for all models used in Description to ICD Code conversion
+│   ├── Evaluation_ICD_Desc.ipynb             # This notebook has the graphs of both training and tetsing data for all models used in ICD Code to Description conversion
+│   ├── Testing_Desc_ICD.ipynb                # This notebook has the code for using the best model to generate ICD Code from Description from every models used.
+│   ├── Testing_ICD_Desc.ipynb                # This notebook has the code for using the best model to generate Description from Desction from every models used.
+│   ├── Tokenization.ipynb                    # This notebook has the code for using BPE tokenizer and adding padding before using Seq2Seq models.
+│
+│── src/                            
+│   ├── main/                      
+│   │   ├── Desc_to_ICD/               
+│   │   │   ├── BiGRU.py                      # This python file has the code of implementing Bidirectional GRU model along with optuna hyperparameter tuning.
+│   │   │   ├── BiLSTM.py                     # This python file has the code of implementing Bidirectional LSTM model along with optuna hyperparameter tuning.
+│   │   │   ├── BiRNN.py                      # This python file has the code of implementing Bidirectional RNN model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepGRU.py                    # This python file has the code of implementing Deep GRU model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepLSTM.py                   # This python file has the code of implementing Deep LSTM model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepRNN.py                    # This python file has the code of implementing Deep RNN model along with optuna hyperparameter tuning.
+│   │   │   ├── GRU_first.py                  # This python file has the code of implementing GRU model with first 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── GRU_last.py                   # This python file has the code of implementing GRU model with last 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── GRU_middle.py                 # This python file has the code of implementing GRU model with middle 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── LSTM_last.py                  # This python file has the code of implementing LSTM model with last 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── LSTM_first.py                 # This python file has the code of implementing LSTM model with first 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── LSTM_middle.py                # This python file has the code of implementing LSTM model with middle 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── RNN_first.py                  # This python file has the code of implementing RNN model with first 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── RNN_last.py                   # This python file has the code of implementing RNN model with last 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── RNN_middle.py                 # This python file has the code of implementing RNN model with middle 5 tokens as output(ICD Codes tokens) along with optuna hyperparameter tuning.
+│   │   │   ├── Transfomer.py                 # This python file has the code of implementing Transformers model along with optuna hyperparameter tuning.
+│   │   ├── ICD_to_Desc/
+│   │   │   ├── BiGRU.py                      # This python file has the code of implementing Bidirectional GRU model along with optuna hyperparameter tuning.
+│   │   │   ├── BiLSTM.py                     # This python file has the code of implementing Bidirectional LSTM model along with optuna hyperparameter tuning.
+│   │   │   ├── BiRNN.py                      # This python file has the code of implementing Bidirectional RNN model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepGRU.py                    # This python file has the code of implementing Deep GRU model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepLSTM.py                   # This python file has the code of implementing Deep LSTM model along with optuna hyperparameter tuning.
+│   │   │   ├── DeepRNN.py                    # This python file has the code of implementing Deep RNN model along with optuna hyperparameter tuning.
+│   │   │   ├── GRU.py                        # This python file has the code of implementing GRU model along with optuna hyperparameter tuning.
+│   │   │   ├── LSTM.py                       # This python file has the code of implementing LSTM model along with optuna hyperparameter tuning.
+│   │   │   ├── RNN.py                        # This python file has the code of implementing RNN model along with optuna hyperparameter tuning.
+│   │   │   ├── Transfomer.py                 # This python file has the code of implementing Transformers model along with optuna hyperparameter tuning.
+│   │
+├── Model_rnn.py                              # This python file has the code of all seq2seq models used along with the train function
+├── Transformer_model.py                      # This python file has the code of all modules in transformer architecture used along with the train function
+├── utils.py                                  # This python file has the supported dataset function which was used before passing into the model
+│── requirements.txt                          # List of required Python libraries
+│── README.md                                 # Project documentation
 
+```
 
 ---
 
